@@ -30308,7 +30308,7 @@ async function exportSecrets() {
     }
 
     if (tls_verify_skip === true || tls_verify_skip === 'true') {
-      httpsAgentConfig['rejectUnauthorized'] = false;
+      httpAgentConfig['rejectUnauthorized'] = false;
       core.info('Skipping TLS verification, we recommend not to use this in production');
     }
 
