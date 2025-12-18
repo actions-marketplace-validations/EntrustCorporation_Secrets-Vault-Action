@@ -1,6 +1,6 @@
 # Secret Vault Action With Gitea Trial Guide
 
-This guide explains how to evaluate the Entrust Secrets Vault Action with username and password authentication. It includes two ready-to-run GitHub Actions workflows: a lightweight echo example that confirms vault access and a SonarQube workflow that uses the retrieved secret in a real analysis pipeline.
+This guide explains how to use the Entrust Secrets Vault Action with username and password authentication. It includes two ready-to-run Gitea Actions workflows: a lightweight echo example that confirms vault access and a SonarQube workflow that uses the retrieved secret in a real analysis pipeline.
 
 ## 1. Prerequisites
 
