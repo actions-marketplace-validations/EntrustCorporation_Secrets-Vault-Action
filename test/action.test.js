@@ -1,6 +1,7 @@
 // Mock dependencies before requiring any modules
 jest.mock('@actions/core', () => ({
   getInput: jest.fn(),
+  getBooleanInput: jest.fn(),
   setOutput: jest.fn(),
   setFailed: jest.fn(),
   setSecret: jest.fn(),
@@ -45,6 +46,7 @@ describe('Secrets Vault Action', () => {
       };
       return inputs[name] || '';
     });
+    core.getBooleanInput.mockImplementation(() => false);
     
     // Mock filesystem operations
     fs.writeFileSync = jest.fn();
@@ -121,6 +123,7 @@ describe('Secrets Vault Action', () => {
       };
       return inputs[name] || '';
     });
+    core.getBooleanInput.mockImplementation(() => false);
 
     // Execute the run function
     await exportSecrets();
@@ -141,6 +144,7 @@ describe('Secrets Vault Action', () => {
       };
       return inputs[name] || '';
     });
+    core.getBooleanInput.mockImplementation(() => false);
 
     // Execute the run function
     await exportSecrets();
